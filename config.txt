@@ -1,0 +1,5 @@
+{
+  "url": "http://ck101.com/thread-2259215-[i]-2.html",
+  "maxpage": -1,
+  "startpage": 1
+}

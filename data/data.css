@@ -1,0 +1,11 @@
+#fontsize{
+display: block;
+position: fixed;
+z-index:9999;
+right: 3%;
+background: rgba(0%,0%,0%,0);
+}
+#fontB, #fontS, #prev, #next, #inverted{
+background: rgba(0%,0%,0%,0.1);
+color: rgb(102, 76, 206);
+}
