@@ -1,3 +1,3 @@
-@node-x86.exe app-noresn.js
+@node app-noresn.js
 @echo งนฆจ!!
 @pause

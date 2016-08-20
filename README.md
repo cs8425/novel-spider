@@ -6,6 +6,10 @@ grab novel from ck101.com
 自動抓取卡提諾的小說內容,並存成n個html檔.
 
 
+安裝
+------
+執行`npm install`
+
 用法
 ------
 
@@ -18,8 +22,8 @@ grab novel from ck101.com
 
 然後存檔&執行:
 
-Windows: 執行"run.bat"
-
-Linux or MAC: 安裝完node.js之後,執行"run.sh"或是"node app-noresn.js"
+`node app-noresn.js` : 一頁一頁抓, 每頁一個檔
+`node app-resn.js` : 一次3頁一起抓, 每頁一個檔
+`node app-all-to-one.js` : 一頁一頁抓, 全部存一個檔
 
 

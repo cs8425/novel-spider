@@ -1,0 +1,10 @@
+{
+  "name": "novel-spider",
+  "version": "1.0.1",
+  "description": "grab novel from ck101",
+  "author": "cs8425",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "*"
+  }
+}
