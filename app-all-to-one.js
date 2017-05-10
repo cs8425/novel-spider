@@ -3,6 +3,7 @@ var maxpage = 43;
 var page = 1;*/
 
 var http = require("http");
+var https = require("https");
 var fs = require('fs');
 var $ = require('cheerio');
 
@@ -40,12 +41,14 @@ var html_end = '\
 </body>\
 </html>';
 
+var http_get = (url.match(/^https:\/\//))? https.get : http.get;
+
 var title;
 var out;
 //var out = fs.createWriteStream(output_filename);
 
 var get = function (page){
-	http.get(url.replace(/\[i\]/, page ), function(res) {
+	http_get(url.replace(/\[i\]/, page ), function(res) {
 		console.log("Got response: " + res.statusCode);
 		var str = [];
 		res.on('data', function (chunk) {
@@ -71,7 +74,7 @@ var get = function (page){
 	});
 };
 var get_title = function (){
-	http.get(url.replace(/\[i\]/, 1 ), function(res) {
+	http_get(url.replace(/\[i\]/, 1 ), function(res) {
 		console.log("Got response: " + res.statusCode);
 		var str = [];
 		res.on('data', function (chunk) {
