@@ -72,7 +72,8 @@ var get = function (page){
 		res.on('end', function () {
 			//console.log(str);
 			//var data = $('.postmessage', str);
-			var data = $('.t_f', Buffer.concat(str).toString());
+			var $ = cheerio.load(Buffer.concat(str).toString(), { decodeEntities: false });
+			var data = $('.t_f');
 			for(var i=0; i<data.length; i++){
 				//console.log($(data[i]).html());
 				out.write(temp1 + '<div class="ui ribbon blue label">'+ (i+1) +'</div>' + $(data[i]).html() + temp2 + '\n', 'utf8');
