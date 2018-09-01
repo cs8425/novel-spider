@@ -128,7 +128,8 @@ var get_title = function (){
 		});
 		res.on('end', function () {
 			var $ = require('cheerio').load(Buffer.concat(str).toString());
-			title = $('title').text().split(' - ')[0];
+			title = $('title').text().split(' - ')[0].trim();
+			console.log('title:', title);
 			if(maxpage < 0){
 				var maxp = 1;
 				if($('.pg')){

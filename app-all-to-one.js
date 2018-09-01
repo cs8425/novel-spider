@@ -81,7 +81,8 @@ var get_title = function (){
 			str.push(chunk);
 		});
 		res.on('end', function () {
-			title = $('title', Buffer.concat(str).toString()).text().split(' - ')[0];
+			title = $('title', Buffer.concat(str).toString()).text().split(' - ')[0].trim();
+			console.log('title:', title);
 			out = fs.createWriteStream(title + '.html');
 			out.write(html1 + title + html2);
 			get(page);

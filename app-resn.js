@@ -92,7 +92,8 @@ var get_title = function (){
 			str.push(chunk);
 		});
 		res.on('end', function () {
-			title = $('title', Buffer.concat(str).toString()).text().split(' - ')[0];
+			title = $('title', Buffer.concat(str).toString()).text().split(' - ')[0].trim();
+			console.log('title:', title);
 			fs.mkdirSync(title);
 			j = page;
 			go();
